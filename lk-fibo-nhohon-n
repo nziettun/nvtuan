@@ -1,0 +1,39 @@
+package nhom7;
+
+public class fibonacci {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n = 500;
+        System.out.printf("Các số fibonacci nhỏ hơn %d và " + "là số nguyên tố: ", n);
+        int i = 0;
+        while (fibo(i) < 500) {
+            int fi = fibo(i);
+            if (ip(fi)) {
+                System.out.print(fi + " ");
+            }
+            i++;
+        }
+    }
+    public static int fibo(int n) {
+        if (n < 0) {
+            return -1;
+        } else if (n == 0 || n == 1) {
+            return n;
+        } else {
+            return fibo(n - 1) + fibo(n - 2);
+        }
+    }
+    public static boolean ip(int n) {
+        if (n < 2) {
+            return false;
+        }
+        int sq = (int) Math.sqrt(n);
+        for (int i = 2; i <= sq; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
