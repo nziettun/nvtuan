@@ -1,22 +1,2 @@
 # nvtuan
 nvtuangit
-package nhom7;
-
-public class giaithua {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int a = 10;
-		int b =5;
-		int c = 2;
-		System.out.println("GT:" +a+ ": " +giaithua.gt(a));
-		System.out.println("Gt:" +b+ ": " +giaithua.gt(b));
-		System.out.println("Gt:" +c+ ": " +giaithua.gt(c));
-	}
-	public static long gt(int n) {
-		if(n>0)
-			return n*gt(n-1);
-		else
-			return 1;
-	}
-}
