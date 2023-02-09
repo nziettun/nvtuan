@@ -1,0 +1,18 @@
+package nhom7;
+
+public class sum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n =11123;
+		int tong = 0;
+		while(n>0) {
+			int s;
+			s = n%10;
+			n=n/10;
+			tong += s;
+		}
+		System.out.println("Tong: " +tong);
+	}
+
+}
