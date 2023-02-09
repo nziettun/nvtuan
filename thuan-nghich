@@ -1,0 +1,19 @@
+package nhom7;
+
+public class UCvsBC {
+	public static void main(String[] args) {
+		int a = 10;
+		int b = 5;
+		// TODO Auto-generated method stub
+		System.out.println("Uoc chung: " +a+ " va " +b+ "la: " +UCLN(a,b));
+		System.out.println("Boi chung: " +a+ " va " +b+ "la: " +BCNN(a,b));
+	}
+	public static int UCLN(int a, int b){
+		if(b==0)
+			return a;
+		return UCLN(b, a%b);
+	}
+	public static int BCNN(int a, int b) {
+		return (a*b) / UCLN(a,b);
+	}
+}
